@@ -4,13 +4,20 @@
 
 ![Draw.io 插件封面插画](images/cover.webp)
 
-![离线 draw.io 编辑器浅色预览](images/editing-light.png)
+![Offline Draw.io editor preview in English](images/editing-light.png)
 
-![离线 draw.io 编辑器深色预览](images/editing-dark.png)
+![Offline Draw.io editor preview in English](images/editing-dark.png)
 
-## 使用
+## Install from Orca
 
-在 Orca 的插件管理中添加本目录作为本地开发插件（需要通过 manifest 校验）。通过新建文件菜单选择「新建 Draw.io 图表」，或打开已有 `.drawio` 文件。编辑器页用于绘图，Source 页可以检查和修改 XML。
+In Orca, open **Settings → Plugins** and add the community marketplace once:
+
+- URL: `https://github.com/stablyai/orca-community-plugins.git`
+- Ref: `main`
+
+Search for **Draw.io** and install it from the catalog. Keep **Update plugins automatically** enabled to receive catalog releases automatically. Direct Git URL installs and local development folders require manual updates.
+
+To develop this plugin locally, add this directory as a development folder. In either setup, open an existing `.drawio` file or choose **New Draw.io diagram** from the new-file menu. The editor is for drawing; the Source tab lets you inspect and edit XML.
 
 - English menus by default, with Chinese available offline; shape dragging, connectors, text, styles and layers.
 - 常用矢量图形库：通用、UML、ER、BPMN、流程图、基础形状和箭头。
@@ -44,9 +51,11 @@ node /data/LinDoo/orca/config/scripts/validate-plugin-files.mjs plugins/drawio
 
 浏览器测试使用 `ORCA_DIR` 中已安装的 Playwright，需要已安装 Chromium（`playwright install chromium`）。测试运行在与 Orca 隔离帧相同的独立 origin 和 CSP 下，覆盖本地多文件加载、干净打开、形状编辑、保存刷新、撤销重做、背景配置、压缩多页、自定义属性、冲突重试、只读、无效 XML 和主题，并断言没有外部网络请求。测试用文档宿主替身模拟 Orca 接口；真实 Orca 中的安装与快捷键还需手动验收。
 
-## 发布状态
+## Automatic updates
 
-本插件以 `lindoo.drawio` 提交至上游仓库审核，展示作者为 LinDoo。目录条目位于仓库根目录的 `orca-catalog.json`，发布记录通过 `scripts/release-entry.mjs` 从已提交的插件内容生成。
+Install Draw.io from the Orca community marketplace after this repository appears in the directory. Direct Git URL installs and local development folders require manual updates. Orca automatically checks enabled catalog plugins at startup and every six hours when **Update plugins automatically** is enabled. Community releases are pinned to an exact commit and content hash before Orca can install them.
+
+Community listings are automatically checked and are not reviewed by Orca maintainers. The editor runs in Orca's sandboxed UI frame and reads the document the user opens.
 
 ## 许可证与来源
 
