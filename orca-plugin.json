@@ -2,7 +2,7 @@
   "manifestVersion": 2,
   "id": "drawio",
   "name": "Draw.io",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "execution": "sandboxed-ui",
   "description": "Create and edit offline draw.io flowcharts, architecture diagrams, and multi-page diagrams in Orca.",
   "license": "Apache-2.0",

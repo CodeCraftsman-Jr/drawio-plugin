@@ -57,9 +57,11 @@ Install Draw.io from the Orca community marketplace after this repository appear
 
 Community listings are automatically checked and are not reviewed by Orca maintainers. The editor runs in Orca's sandboxed UI frame and reads the document the user opens.
 
-## 许可证与来源
+## Credits and licenses
 
-本插件使用 Apache-2.0。内嵌 draw.io 32.6.1，固定提交 `84487b4891cbc0f32d7e30f34cf878c87cb1f414`，来自 <https://github.com/jgraph/drawio>，其版权和许可证见 `THIRD_PARTY_NOTICES.txt` 和 `LICENSE`。编译脚本保留上游 JavaScript 内的许可证注释。未将 draw.io 商标或图标作为本插件的自有标识。
+This plugin is licensed under Apache-2.0 and continues the original Orca Draw.io plugin started by [LinDoo (@lindoo67)](https://github.com/lindoo67), whose original project is [lindoo67/drawio-plugin](https://github.com/lindoo67/drawio-plugin). This fork is maintained by CodeCraftsman-Jr. Thank you, LinDoo, for the original plugin and Orca integration work.
+
+The embedded draw.io editor is from [JGraph](https://github.com/jgraph/drawio), version 32.6.1 at commit `84487b4891cbc0f32d7e30f34cf878c87cb1f414`. Its copyright and license notices are in `THIRD_PARTY_NOTICES.txt` and `LICENSE`; the build retains upstream JavaScript license comments. The draw.io name and icons are not presented as this plugin's own branding.
 
 ## 图片资源
 
