@@ -51,7 +51,7 @@ mkdirSync(vendorDir,{recursive:true})
 rmSync(imageDir,{recursive:true,force:true})
 mkdirSync(imageDir,{recursive:true})
 writeFileSync(resolve(imageDir,'github-logo.svg'),readFileSync(resolve(web,'images/github-logo.svg')))
-const html = `<meta charset="utf-8"><link rel="stylesheet" href="styles.css"><style>html,body{height:100%;margin:0;overflow:hidden}#message{position:fixed;inset:0;display:grid;place-content:center;background:var(--orca-background,#fff);color:var(--orca-foreground,#222);font:14px system-ui;z-index:99999;padding:32px;white-space:pre-wrap}#message[hidden]{display:none}</style><div id="message" role="status">正在加载 draw.io…</div><script src="bootstrap.js"></script><script src="resources.js"></script><script src="vendor/app.min.js"></script><script src="vendor/shapes.min.js"></script><script src="vendor/stencils.min.js"></script><script src="editor.js"></script>`
+const html = `<meta charset="utf-8"><link rel="stylesheet" href="styles.css"><style>html,body{height:100%;margin:0;overflow:hidden}#message{position:fixed;inset:0;display:grid;place-content:center;background:var(--orca-background,#fff);color:var(--orca-foreground,#222);font:14px system-ui;z-index:99999;padding:32px;white-space:pre-wrap}#message[hidden]{display:none}</style><div id="message" role="status">Loading draw.io…</div><script src="bootstrap.js"></script><script src="resources.js"></script><script src="vendor/app.min.js"></script><script src="vendor/shapes.min.js"></script><script src="vendor/stencils.min.js"></script><script src="editor.js"></script>`
 if (Buffer.byteLength(html)>10*1024*1024) throw Error('Editor exceeds Orca entry limit')
 writeFileSync(resolve(editorDir,'index.html'),html)
 writeFileSync(resolve(editorDir,'bootstrap.js'),boot)
